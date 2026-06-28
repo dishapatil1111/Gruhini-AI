@@ -1,0 +1,11 @@
+HTML is the standard markup language for creating web pages.
+
+CSS is used to style and layout web pages.
+
+JavaScript is used to make web pages interactive.
+
+Cybersecurity is the practice of protecting systems and networks.
+
+A firewall monitors incoming and outgoing traffic.
+
+Machine Learning is a subset of AI that allows systems to learn from data.
