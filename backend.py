@@ -1,7 +1,8 @@
 import requests
+from config.settings import OLLAMA_URL, DEFAULT_MODEL
 from rag.retriever import retrieve
 
-OLLAMA_URL = "http://localhost:11434/api/generate"
+
 
 # ================= SESSION =================
 SESSION = {
@@ -25,7 +26,7 @@ SESSION = {
 def call_llm(prompt):
     try:
         response = requests.post(OLLAMA_URL, json={
-            "model": "mistral",
+            "model": DEFAULT_MODEL,
             "prompt": prompt,
             "stream": False
         })
