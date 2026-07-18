@@ -5,7 +5,7 @@ from components.sidebar import show_sidebar
 
 from views.dashboard import show as show_dashboard
 from views.ai_chat import show as show_ai_chat
-
+from views.study_hub import show as show_study_hub
 # ==========================================
 # PAGE CONFIG
 # ==========================================
@@ -57,6 +57,9 @@ if page == "Dashboard":
 
 elif page == "AI Chat":
     show_ai_chat()
+
+elif page == "Study Hub":
+    show_study_hub()
 
 else:
     st.title("🚧")
