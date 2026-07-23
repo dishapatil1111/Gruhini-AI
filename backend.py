@@ -25,14 +25,27 @@ SESSION = {
 # ================= LLM =================
 def call_llm(prompt):
     try:
-        response = requests.post(OLLAMA_URL, json={
-            "model": DEFAULT_MODEL,
-            "prompt": prompt,
-            "stream": False
-        })
-        return response.json()["response"].strip()
-    except:
-        return "⚠️ AI not responding."
+        response = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": DEFAULT_MODEL,
+                "prompt": prompt,
+                "stream": False,
+            },
+            timeout=300,
+        )
+
+        response.raise_for_status()
+
+        data = response.json()
+
+        if "response" in data:
+            return data["response"].strip()
+
+        return f"Unexpected response:\n{data}"
+
+    except Exception as e:
+        return f"⚠️ Error:\n{e}"
 
 # ================= VALIDATION =================
 def is_valid(text):

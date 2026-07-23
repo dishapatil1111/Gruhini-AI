@@ -2,7 +2,7 @@ import streamlit as st
 
 from utils.session import initialize_session
 from components.sidebar import show_sidebar
-
+from views.coding_hub import show as show_coding_hub
 from views.dashboard import show as show_dashboard
 from views.ai_chat import show as show_ai_chat
 from views.study_hub import show as show_study_hub
@@ -60,6 +60,9 @@ elif page == "AI Chat":
 
 elif page == "Study Hub":
     show_study_hub()
+
+elif page == "Coding Hub":
+    show_coding_hub()
 
 else:
     st.title("🚧")
