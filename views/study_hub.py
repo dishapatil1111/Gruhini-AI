@@ -1,14 +1,13 @@
 import streamlit as st
 from backend import ask_gruhini
+from prompts.study import EXPLAIN_TOPIC_PROMPT
 
 
 def show():
 
     st.title("📚 Study Hub")
 
-    st.write(
-        "Learn any engineering topic with AI."
-    )
+    st.write("Learn any engineering topic with AI.")
 
     topic = st.text_input(
         "Enter a topic",
@@ -24,32 +23,9 @@ def show():
             st.warning("Please enter a topic.")
             return
 
-        prompt = f"""
-You are Gruhini AI, an expert engineering tutor.
-
-Explain the topic: {topic}
-
-Rules:
-- Respond directly.
-- Do NOT mention prompts or instructions.
-- Do NOT write things like "If the user asks..."
-- Do NOT include follow-up instructions.
-- Use Markdown headings.
-
-Format exactly like this:
-
-# Definition
-
-# Why it is Important
-
-# Simple Explanation
-
-# Real-world Example
-
-# Interview Tip
-
-Explain in simple language suitable for engineering students.
-"""
+        prompt = EXPLAIN_TOPIC_PROMPT.format(
+            topic=topic
+        )
 
         with st.spinner("Generating explanation..."):
 
