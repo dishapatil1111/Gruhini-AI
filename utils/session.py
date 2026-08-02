@@ -4,6 +4,9 @@ import uuid
 
 def initialize_session():
 
+    # -----------------------------
+    # Chat Sessions
+    # -----------------------------
     if "sessions" not in st.session_state:
         st.session_state.sessions = {}
 
@@ -22,5 +25,20 @@ def initialize_session():
         st.session_state.sessions[chat_key] = {
             "messages": []
         }
+
+    # -----------------------------
+    # Interview Hub State
+    # -----------------------------
+    if "mock_question" not in st.session_state:
+        st.session_state.mock_question = ""
+
+    if "mock_answer" not in st.session_state:
+        st.session_state.mock_answer = ""
+
+    if "mock_feedback" not in st.session_state:
+        st.session_state.mock_feedback = ""
+
+    if "mock_started" not in st.session_state:
+        st.session_state.mock_started = False
 
     return chat_key

@@ -6,6 +6,8 @@ from views.coding_hub import show as show_coding_hub
 from views.dashboard import show as show_dashboard
 from views.ai_chat import show as show_ai_chat
 from views.study_hub import show as show_study_hub
+from views.interview_hub import show as show_interview_hub
+from views.career_hub import show as show_career_hub
 # ==========================================
 # PAGE CONFIG
 # ==========================================
@@ -63,6 +65,12 @@ elif page == "Study Hub":
 
 elif page == "Coding Hub":
     show_coding_hub()
+
+elif page == "Interview Hub":
+    show_interview_hub()
+
+elif page == "Career Hub":
+    show_career_hub()
 
 else:
     st.title("🚧")
