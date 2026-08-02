@@ -1,16 +1,82 @@
-# Virtual Environment
+# ============================
+# Python
+# ============================
+
 venv/
 .venv/
-
-# Python Cache
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
 
-# Speech Model
+# ============================
+# Environment Variables
+# ============================
+
+.env
+.env.*
+
+# ============================
+# Local User Data
+# ============================
+
+memory.json
+profile_memory.json
+interview_scores.json
+
+# (Later we may store everything here)
+data/
+
+# ============================
+# Logs
+# ============================
+
+*.log
+
+# ============================
+# Databases
+# ============================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# ============================
+# Hugging Face / AI
+# ============================
+
+hf_cache/
+.cache/
+
+# ============================
+# VS Code
+# ============================
+
+.vscode/
+
+# ============================
+# OS Files
+# ============================
+
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# ============================
+# Models
+# ============================
+
 vosk-model/
 
-# OS Files
-desktop.ini
+# ============================
+# Streamlit
+# ============================
 
-# VS Code
-.vscode/
+.streamlit/secrets.toml
+
+# ============================
+# Temporary Files
+# ============================
+
+*.tmp
+*.bak
