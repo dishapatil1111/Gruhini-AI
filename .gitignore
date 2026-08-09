@@ -80,3 +80,7 @@ vosk-model/
 
 *.tmp
 *.bak
+
+# Gruhini user data - NEVER commit
+data/*.json
+data/*/*.json
