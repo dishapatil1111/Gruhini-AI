@@ -8,6 +8,7 @@ from views.dashboard import show as show_dashboard
 from views.ai_chat import show as show_ai_chat
 from views.study_hub import show as show_study_hub
 from views.interview_hub import show as show_interview_hub
+from views.interview_history import show as show_interview_history
 from views.career_hub import show as show_career_hub
 from views.memory import show as show_memory
 
@@ -87,6 +88,10 @@ elif page == "Coding Hub":
 elif page == "Interview Hub":
 
     show_interview_hub()
+
+elif page == "Interview History":
+
+    show_interview_history()
 
 
 elif page == "Career Hub":

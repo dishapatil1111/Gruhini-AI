@@ -85,6 +85,14 @@ def show_sidebar():
         st.session_state.page = "Interview Hub"
 
         st.rerun()
+    if st.sidebar.button(
+        "📜 Interview History",
+        use_container_width=True,
+    ):
+
+        st.session_state.page = "Interview History"
+
+        st.rerun()
 
     if st.sidebar.button(
         "💼 Career Hub",
